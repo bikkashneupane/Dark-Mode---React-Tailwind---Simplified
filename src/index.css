@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-extrabold text-xl;
+  }
+}
+
+body {
+  @apply m-0 p-0 font-serif bg-gray-100 text-black dark:bg-gray-900 dark:text-gray-200;
+}
