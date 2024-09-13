@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaMoon } from "react-icons/fa";
+import { LuSunMedium } from "react-icons/lu";
 
 function App() {
   const [isDark, setIsDark] = useState();
@@ -19,13 +21,19 @@ function App() {
   };
 
   return (
-    <div className="mt-10 flex justify-center">
+    <div className="mt-10 flex flex-col items-center gap-4">
       <button
-        className="bg-black dark:bg-gray-100 text-white dark:text-black px-6 py-2 rounded "
+        className="bg-gray-200 dark:bg-gray-200 text-black p-2 rounded-full"
         onClick={toggleDarkMode}
       >
-        Dark Mode
+        {isDark ? (
+          <LuSunMedium className="h-10 w-10 " />
+        ) : (
+          <FaMoon className="h-10 w-10" />
+        )}
       </button>
+
+      <h1>Dark Mode Simplified</h1>
     </div>
   );
 }
